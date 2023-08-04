@@ -35,17 +35,23 @@ end
 get("/payment/results") do
   @apr = params.fetch("users_apr").to_f 
 
-  @principal = params.fetch(users_principal).to_f
+  @principal = params.fetch("users_principal").to_f
 
-  @years = params.fetch(users_years).to_f
+  @years = params.fetch("users_years").to_f
 
   erb(:payment_results)
 end
 
 get("/random/new") do
-  #here
+  erb(:new_random)
 end
 
 get("/random/results") do
-  #here
+  @max = params.fetch("users_max_number").to_f 
+
+  @min = params.fetch("users_min_number").to_f 
+
+  @result = rand(@min..@max)
+
+  erb(:random_results)
 end

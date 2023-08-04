@@ -7,14 +7,21 @@
     Apr
   </dt>
   <dd>
-    <%= @the_num %>
+    <%= @apr %>
   </dd>
 
   <dt>
-    Square
+    Principal
   </dt>
   <dd>
-    <%= @the_result %>
+    <%= @principal %>
+  </dd>
+
+  <dt>
+    Years
+  </dt>
+  <dd>
+    <%= @years %>
   </dd>
 </dl>
 
