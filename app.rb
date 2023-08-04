@@ -48,10 +48,11 @@ end
 
 get("/random/results") do
   @max = params.fetch("users_max_number").to_f 
-
   @min = params.fetch("users_min_number").to_f 
+  max = @max
+  min = @min
 
-  @result = rand(@min..@max)
+  @random_number = rand(min..max)
 
   erb(:random_results)
 end

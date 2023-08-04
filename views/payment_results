@@ -1,5 +1,5 @@
 <h1>
-  Square Root Results
+  Payment Results
 </h1>
 
 <dl>
@@ -25,6 +25,6 @@
   </dd>
 </dl>
 
-<a href="/square/new">
+<a href="/payment/new">
   Calculate another payment
 </a>
