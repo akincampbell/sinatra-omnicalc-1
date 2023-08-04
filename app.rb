@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  
+  erb(:layout)
 end
 
 get("/square/new") do
@@ -29,5 +29,23 @@ get("/square_root/results") do
 end
 
 get("/payment/new") do
+  erb(:new_payment)
+end
+
+get("/payment/results") do
+  @apr = params.fetch("users_apr").to_f 
+
+  @principal = params.fetch(users_principal).to_f
+
+  @years = params.fetch(users_years).to_f
+
+  erb(:payment_results)
+end
+
+get("/random/new") do
+  #here
+end
+
+get("/random/results") do
   #here
 end
